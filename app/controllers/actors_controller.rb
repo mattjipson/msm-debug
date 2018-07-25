@@ -23,7 +23,7 @@ class ActorsController < ApplicationController
     @actor.image_url = fetch("image_url")
     @actor.save
 
-    redirect_to("/actors", :notice => "Actor created successfully.")
+    redirect_to("/actors")
   end
 
   def edit_form
@@ -48,6 +48,6 @@ class ActorsController < ApplicationController
 
     @actor.destroy
 
-    redirect_to("/actors", :notice => "Actor deleted successfully.)
+    redirect_to("/actors", :notice => "Actor deleted successfully.")
   end
 end
